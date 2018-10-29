@@ -57,7 +57,7 @@ def MiniBatchGradientDescent(x,y,theta1,theta2):
 			gradient1 = 2 * loss + gradient1
 			gradient2 = 2 * x[RandomIndex] * loss + gradient2
 		Stopflag = ((gradient1/M) * (gradient1/M) + (gradient2/M) * (gradient2/M)) ** 0.5
-		print(i,'M is:',M, ' MSGD loss is: ', loss, 'gradient is:', Stopflag, '\n')
+		print(i,' MSGD loss is: ', loss, 'gradient is:', Stopflag, '\n')
 		if (Stopflag < GradientStop):
 			break
 		# 更新
@@ -65,6 +65,30 @@ def MiniBatchGradientDescent(x,y,theta1,theta2):
 		theta2 = theta2 - ALPHA * (gradient2/M)
 	return theta1,theta2
 
+"""
+全部数据的梯度细节算法，从样本中随机选取部分数据更新梯度
+"""
+def GradientDescent(x,y,theta1,theta2):
+	for i in range(0,MaxInteration):
+		gradient1 = 0.0
+		gradient2=0.0
+		loss = 0.0
+		M = 1000 # all samples
+		# M can be change
+		for j in range(0,M):
+			# RandomIndex = random.randint(0,999)
+			hypothesis = theta1 + theta2 * x[j]
+			loss = hypothesis - y[j]
+			gradient1 = 2 * loss + gradient1
+			gradient2 = 2 * x[j] * loss + gradient2
+		Stopflag = ((gradient1/M) * (gradient1/M) + (gradient2/M) * (gradient2/M)) ** 0.5
+		print(i,'M is:',M, ' GD loss is: ', loss, 'gradient is:', Stopflag, '\n')
+		if (Stopflag < GradientStop):
+			break
+		# 更新theta
+		theta1 = theta1 - ALPHA * (gradient1/M)
+		theta2 = theta2 - ALPHA * (gradient2/M)
+	return theta1,theta2
 
 
 def ReadData():
@@ -80,6 +104,7 @@ def main():
 	theta2 = 1.0
 	# theta1,theta2 = StotisticGradientDescent(traindata,trainlabel,theta1,theta2)
 	theta1,theta2 = MiniBatchGradientDescent(traindata,trainlabel,theta1,theta2)
+	# theta1,theta2 = GradientDescent(traindata,trainlabel,theta1,theta2)
 	print('y=',theta1,'+',theta2,'* x')
 
 if __name__ == "__main__":
