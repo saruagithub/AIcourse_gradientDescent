@@ -10,3 +10,5 @@ hypothesis = theta1 + theta2 * x
 loss_function = (hypothesis - y)^2
 
 finish the SGD & BachGD algorithm, adding some tips to improve the optimization process
+
+environment: pycharm, python3.6
