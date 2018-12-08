@@ -38,9 +38,9 @@ draw LOOCV error graph with sigma changed in 'a3data1'
 
 * Gaussian function
 
-```math
+$$
 \phi(x,\sigma) = e^{-\sigma^2||x||_2^2}
-```
+$$
 
 * interpolation condition
 
