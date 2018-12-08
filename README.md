@@ -1,4 +1,3 @@
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 ##### environment: pycharm, python3.6
 AIcourse_gradientDescent
 homework in Ai basic course
@@ -28,7 +27,9 @@ draw LOOCV error graph with sigma changed in 'a3data1'
 * Gaussian function
 
 ```math
+$
 \phi(x,\sigma) = e^{-\sigma^2||x||_2^2}
+$
 ```
 
 * interpolation condition
