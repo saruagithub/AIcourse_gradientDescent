@@ -1,15 +1,3 @@
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-
 ##### environment: pycharm, python3.6
 AIcourse_gradientDescent
 homework in Ai basic course
@@ -38,9 +26,9 @@ draw LOOCV error graph with sigma changed in 'a3data1'
 
 * Gaussian function
 
-$$
+```math
 \phi(x,\sigma) = e^{-\sigma^2||x||_2^2}
-$$
+```
 
 * interpolation condition
 
