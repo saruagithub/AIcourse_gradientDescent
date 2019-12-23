@@ -7,7 +7,7 @@ here are 1000 datas (x,y)
 
 hypothesis = theta1 + theta2 * x
 
-loss_function = (hypothesis - y)^2
+<a href="https://www.codecogs.com/eqnedit.php?latex=loss_function&space;=&space;(hypothesis&space;-&space;y)^2" target="_blank"><img src="https://latex.codecogs.com/svg.latex?loss_function&space;=&space;(hypothesis&space;-&space;y)^2" title="loss_function = (hypothesis - y)^2" /></a>
 
 finish the SGD & BachGD algorithm, adding some tips to improve the optimization process
 
